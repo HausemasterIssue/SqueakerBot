@@ -9,4 +9,4 @@
 ```
 A Minecraft anarchy server chatbot made by yours truly, HausemasterIssue.
 
-**No code was skidded/stolen in this project**
+**Almost no code is skidded/stolen in this project**
