@@ -1,7 +1,7 @@
 package dev.hause.squeakerbot.command.commands;
 
 import dev.hause.squeakerbot.command.Command;
-import net.minecraft.network.play.client.CPacketChatMessage;
+import dev.hause.squeakerbot.util.ChatUtil;
 
 public class Help extends Command {
 	
@@ -11,7 +11,7 @@ public class Help extends Command {
 	
 	@Override
 	public void onRun() {
-		mc.player.connection.sendPacket(new CPacketChatMessage("> [SqueakerBot] Commands (3): Help, CoinFlip, AskGod"));
+		ChatUtil.sendChatMessage("> [SqueakerBot] Commands (3): Help, CoinFlip, AskGod");
 	}
 
 }
