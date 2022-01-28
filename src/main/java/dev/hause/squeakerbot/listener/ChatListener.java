@@ -7,7 +7,6 @@ import org.apache.commons.lang3.StringUtils;
 import dev.hause.squeakerbot.command.Command;
 import dev.hause.squeakerbot.command.CommandManager;
 import net.minecraft.client.Minecraft;
-import net.minecraft.network.play.client.CPacketChatMessage;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -25,7 +24,7 @@ public class ChatListener {
 	
 	public void calcCommand(String input) {
 		Random random = new Random();
-		int waitTime = random.nextInt((3000 - 2000) + 1) + 2000;
+		int waitTime = random.nextInt(3000);
 		for(Command c : CommandManager.commands) {
 			if(StringUtils.containsIgnoreCase(input, c.getCommand())) {
 				Timer timer = new Timer();
@@ -38,10 +37,6 @@ public class ChatListener {
 				
 			}
 		}
-	}
-	
-	public void sendMessage(String s) {
-		mc.player.connection.sendPacket(new CPacketChatMessage(s));
 	}
 
 }
