@@ -1,0 +1,16 @@
+[
+{
+  "modid": "squeakerbot",
+  "name": "SqueakerBot",
+  "description": "Minecraft 1.12.2 Chat bot.",
+  "version": "b1",
+  "mcversion": "1.12.2",
+  "url": "https://github.com/HausemasterIssue/SqueakerBot",
+  "updateUrl": "",
+  "authorList": ["HausemasterIssue"],
+  "credits": "CraftyChaos, EmotionalLove for examples on 1.12.2 ChatBots (Didn't Skid!). Minecraft Forge, Bukkit and Spigot fourms, and StackOverflow for help.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
