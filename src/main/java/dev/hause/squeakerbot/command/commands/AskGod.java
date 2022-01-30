@@ -6,11 +6,11 @@ import dev.hause.squeakerbot.util.ChatUtil;
 
 public class AskGod extends Command {
 	
-	private static String[] replies = {"> [SqueakerBot] It is certain.", "> [SqueakerBot] My sources say no.", "> [SqueakerBot] Absolutley.",
-			"> [SqueakerBot] Never.", "> [SqueakerBot] Perhaps.", "> [SqueakerBot] Reply hazy. Ask again later.", "> [SqueakerBot] Based off your tone, no.",
-			"> [SqueakerBot] In the future, yes.", "> [SqueakerBot] Better not tell you now.", "> [SqueakerBot] It is highly unlikely.",
-			"> [SqueakerBot] Do not ask that question ever again.", "> [SqueakerBot] Yes.", "> [SqueakerBot] Not in a trillion years.", "> [SqueakerBot] I do not know.",
-			"> [SqueakerBot] For sure.", "> [SqueakerBot] No."};
+	private static String[] replies = {"It is certain.", "My sources say no.", "Absolutley.",
+			"Never.", "Perhaps.", "Reply hazy. Ask again later.", "Based off your tone, no.",
+			"In the future, yes.", "Better not tell you now.", "It is highly unlikely.",
+			"Do not ask that question ever again.", "Yes.", "Not in a trillion years.", "I do not know.",
+			"For sure.", "No."};
 																																		
 	
 	public AskGod() {
@@ -20,7 +20,7 @@ public class AskGod extends Command {
 	@Override
 	public void onRun() {
 		Random random = new Random();
-		ChatUtil.sendChatMessage((replies[random.nextInt(14)]));
+		ChatUtil.sendChatMessage("> [SqueakerBot] " + (replies[random.nextInt(14)]));
 	}
 
 }

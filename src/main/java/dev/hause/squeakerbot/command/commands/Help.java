@@ -11,7 +11,7 @@ public class Help extends Command {
 	
 	@Override
 	public void onRun() {
-		ChatUtil.sendChatMessage("> [SqueakerBot] Commands (3): Help, CoinFlip, AskGod");
+		ChatUtil.sendChatMessage("> [SqueakerBot] Commands (4): Help, CoinFlip, AskGod, TallyHall");
 	}
 
 }

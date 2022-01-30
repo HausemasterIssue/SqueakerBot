@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ChatListener {
 	
 	Minecraft mc = Minecraft.getMinecraft();
+	public static boolean isToggled = false;
 	
 	@SubscribeEvent
 	public void onChat(ClientChatReceivedEvent event) {
@@ -23,6 +24,15 @@ public class ChatListener {
 	}
 	
 	public void calcCommand(String input) {
+		if(StringUtils.containsIgnoreCase(input, "toggle")) {
+			if(!isAdmin(input)) {
+				return;
+			}
+		}
+		
+		if(!StringUtils.containsIgnoreCase(input, "toggle") && isToggled) {
+			return;
+		}
 		Random random = new Random();
 		int waitTime = random.nextInt(3000);
 		for(Command c : CommandManager.commands) {
@@ -32,11 +42,19 @@ public class ChatListener {
 				  @Override
 				  public void run() {
 					  c.onRun();
+					  
 				  }
 				}, waitTime);
-				
+				break;
 			}
 		}
+	}
+	
+	public boolean isAdmin(String command) {
+		if(command.indexOf("HausemasterIssue") == 1) {
+			return true;
+		}
+		return false;
 	}
 
 }

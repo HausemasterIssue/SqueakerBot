@@ -11,6 +11,8 @@ public class CommandManager {
 		commands.add(new Help());
 		commands.add(new CoinFlip());
 		commands.add(new AskGod());
+		commands.add(new TallyHall());
+		commands.add(new Toggle());
 	}
 
 }
