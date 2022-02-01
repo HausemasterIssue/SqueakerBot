@@ -4,6 +4,7 @@ import java.util.Random;
 import dev.hause.squeakerbot.command.Command;
 import dev.hause.squeakerbot.util.ChatUtil;
 
+@Command.Register(name = "AskGod", aliases = {"AskGod", "Ask", "God"})
 public class AskGod extends Command {
 	
 	private static String[] replies = {"It is certain.", "My sources say no.", "Absolutley.",
@@ -12,10 +13,6 @@ public class AskGod extends Command {
 			"Do not ask that question ever again.", "Yes.", "Not in a trillion years.", "I do not know.",
 			"For sure.", "No."};
 																																		
-	
-	public AskGod() {
-		super("AskGod", new String[] {"AskGod", "Ask"});
-	}
 	
 	@Override
 	public void onRun() {

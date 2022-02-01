@@ -13,6 +13,8 @@ public class CommandManager {
 		commands.add(new AskGod());
 		commands.add(new TallyHall());
 		commands.add(new Toggle());
+		commands.add(new About());
+		commands.add(new Geolocate());
 	}
 
 }

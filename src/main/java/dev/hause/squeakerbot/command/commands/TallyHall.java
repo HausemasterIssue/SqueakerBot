@@ -4,11 +4,8 @@ import java.util.Random;
 import dev.hause.squeakerbot.command.Command;
 import dev.hause.squeakerbot.util.ChatUtil;
 
+@Command.Register(name = "TallyHall", aliases = {"Based", "Music", "Songs", "TheHall", "Hall", "Tally"})
 public class TallyHall extends Command {
-	
-	public TallyHall() {
-		super("TallyHall", new String[] {"Based", "Music", "Songs", "TheHall", "Hall", "Tally"});
-	}
 	
 	private static String[] links = {"https://www.youtube.com/watch?v=ipYafcHd0jA", "https://www.youtube.com/watch?v=I8sUC-dsW8A",
 			"https://www.youtube.com/watch?v=A-ZUo62N7Kc", "https://www.youtube.com/watch?v=-krA-ubCQqg", "https://www.youtube.com/watch?v=TIt4i8AmryQ",

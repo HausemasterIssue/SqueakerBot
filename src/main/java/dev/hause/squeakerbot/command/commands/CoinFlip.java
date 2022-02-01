@@ -4,13 +4,10 @@ import java.util.Random;
 import dev.hause.squeakerbot.command.Command;
 import dev.hause.squeakerbot.util.ChatUtil;
 
+@Command.Register(name = "CoinFlip", aliases = {"Coin", "Flip", "Tails", "Heads"})
 public class CoinFlip extends Command {
 	
 	private static String[] outcomes = {"The coin flip results in Heads!", "The coin flip results in Tails!"};
-	
-	public CoinFlip() {
-		super("CoinFlip", new String[] {"CoinFlip", "Coin", "Flip"});
-	}
 	
 	@Override
 	public void onRun() {
