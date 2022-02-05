@@ -1,17 +1,29 @@
 package dev.hause.squeakerbot.command;
 
+import java.lang.annotation.*;
 import net.minecraft.client.Minecraft;
 
 public class Command {
-	
-	String command;
-	String[] aliases;
+
 	public Minecraft mc = Minecraft.getMinecraft();
 	
-	public Command(String command, String[] aliases) {
-		this.command = command;
-		this.aliases = aliases;
+	String command = getRegister().name();
+	String[] aliases = getRegister().aliases();
+	
+	@Retention(RetentionPolicy.RUNTIME)
+	@Target(ElementType.TYPE)
+	public @interface Register {
+		
+		String name();
+		
+		String[] aliases();
+
 	}
+	
+	private Register getRegister() {
+		return getClass().getAnnotation(Register.class);
+	}
+	
 	
 	public void onRun() {
 		

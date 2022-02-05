@@ -16,9 +16,9 @@ public class SqueakerBot
 {
     public static final String MODID = "squeakerbot";
     public static final String NAME = "SqueakerBot";
-    public static final String VERSION = "b1";
+    public static final String VERSION = "b2";
     public static CommandManager cm = new CommandManager();
-    public static Logger LOGGER = LogManager.getLogger(SqueakerBot.class);
+    public static Logger LOGGER = LogManager.getLogger("SqueakerBot");
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
