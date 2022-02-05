@@ -23,7 +23,7 @@ public class TallyHall extends Command {
 	@Override
 	public void onRun() {
 		Random random = new Random();
-		ChatUtil.sendChatMessage("> [SqueakerBot] " + (applause[random.nextInt(18)]) + (links[random.nextInt(18)]));
+		ChatUtil.sendChatMessage((applause[random.nextInt(18)]) + (links[random.nextInt(18)]));
 	}
 
 }

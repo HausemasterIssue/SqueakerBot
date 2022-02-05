@@ -17,7 +17,7 @@ public class AskGod extends Command {
 	@Override
 	public void onRun() {
 		Random random = new Random();
-		ChatUtil.sendChatMessage("> [SqueakerBot] " + (replies[random.nextInt(14)]));
+		ChatUtil.sendChatMessage((replies[random.nextInt(14)]));
 	}
 
 }

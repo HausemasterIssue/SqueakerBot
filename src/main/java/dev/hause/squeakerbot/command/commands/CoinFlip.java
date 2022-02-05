@@ -12,7 +12,7 @@ public class CoinFlip extends Command {
 	@Override
 	public void onRun() {
 		Random random = new Random();
-		ChatUtil.sendChatMessage("> [SqueakerBot] " + outcomes[random.nextInt(2)]);
+		ChatUtil.sendChatMessage(outcomes[random.nextInt(2)]);
 	}
 	
 

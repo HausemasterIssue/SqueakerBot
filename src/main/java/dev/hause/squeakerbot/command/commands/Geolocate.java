@@ -13,8 +13,13 @@ public class Geolocate extends Command {
 	
 	@Override
 	public void onRun() {
+		String name = queryUtil.getQuery(ChatListener.parsedCommand);
 		Random random = new Random();
-		ChatUtil.sendChatMessage(queryUtil.getQuery(ChatListener.parsedCommand) + "'s exact coordinates are " + "X: " + 1 + (20 - 1) * + random.nextDouble() + " Y: " + + 1 + (20 - 1) * + random.nextDouble());
+		if(name.equalsIgnoreCase("You didn't enter a person to geolocate!") ) {
+			ChatUtil.sendChatMessage(name);
+			return;
+		}
+		ChatUtil.sendChatMessage(name + "'s exact coordinates are " + "X: " + 1 + (20 - 1) * + random.nextDouble() + " Y: " + + 1 + (20 - 1) * + random.nextDouble());
 	}
 
 }

@@ -8,7 +8,7 @@ public class ChatUtil {
 	static Minecraft mc = Minecraft.getMinecraft();
 	
 	public static void sendChatMessage(String message) {
-		mc.player.connection.sendPacket(new CPacketChatMessage(message));
+		mc.player.connection.sendPacket(new CPacketChatMessage("> [SqueakerBot] " + message));
 	}
 
 }

@@ -4,23 +4,15 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 import org.apache.commons.lang3.StringUtils;
-
-import dev.hause.squeakerbot.SqueakerBot;
 import dev.hause.squeakerbot.command.Command;
 import dev.hause.squeakerbot.command.CommandManager;
-import dev.hause.squeakerbot.util.QueryUtil;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class ChatListener {
 	
-	Minecraft mc = Minecraft.getMinecraft();
 	public static boolean isToggled = false;
 	public static String parsedCommand;
-	private static QueryUtil queryUtil = new QueryUtil();
 	
 	@SubscribeEvent
 	public void onChat(ClientChatReceivedEvent event) {
