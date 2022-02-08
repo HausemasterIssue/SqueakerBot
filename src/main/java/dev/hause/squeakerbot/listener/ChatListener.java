@@ -17,6 +17,9 @@ public class ChatListener {
 	@SubscribeEvent
 	public void onChat(ClientChatReceivedEvent event) {
 		String rawCommand = event.getMessage().getUnformattedText();
+		if(unicodeCheck(rawCommand)) {
+			event.setCanceled(true);
+		}
 		int parseIndex = rawCommand.indexOf(">") + 1;
 		parsedCommand = rawCommand.substring(parseIndex).trim();
 		if(parsedCommand.startsWith("~")) {
@@ -54,6 +57,22 @@ public class ChatListener {
 	
 	public boolean isAdmin(String command) {
 		if(command.indexOf("HausemasterIssue") == 1) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static boolean unicodeCheck(String input) {
+		for(char c : input.toCharArray()) {
+			if(isUnicode(c)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static boolean isUnicode(char c) {
+		if(c > 128) {
 			return true;
 		}
 		return false;

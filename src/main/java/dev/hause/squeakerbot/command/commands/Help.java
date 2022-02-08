@@ -8,7 +8,7 @@ public class Help extends Command {
 	
 	@Override
 	public void onRun() {
-		ChatUtil.sendChatMessage("Commands (6): Help, CoinFlip, AskGod, TallyHall, About, Geolocate");
+		ChatUtil.sendChatMessage("Commands (7): Help, CoinFlip, AskGod, TallyHall, About, Geolocate, GapDisease");
 	}
 
 }

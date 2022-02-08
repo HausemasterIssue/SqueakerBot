@@ -3,7 +3,7 @@
   "modid": "squeakerbot",
   "name": "SqueakerBot",
   "description": "Minecraft 1.12.2 Chat bot.",
-  "version": "b2",
+  "version": "b3",
   "mcversion": "1.12.2",
   "url": "https://github.com/HausemasterIssue/SqueakerBot",
   "updateUrl": "",

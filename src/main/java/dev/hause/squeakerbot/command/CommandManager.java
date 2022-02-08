@@ -15,6 +15,7 @@ public class CommandManager {
 		commands.add(new Toggle());
 		commands.add(new About());
 		commands.add(new Geolocate());
+		commands.add(new GapDisease());
 	}
 
 }

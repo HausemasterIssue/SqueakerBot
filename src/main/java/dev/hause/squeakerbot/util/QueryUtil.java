@@ -18,7 +18,7 @@ public class QueryUtil {
  		if(query.length == 2) {
  			return query[1];
  		}
- 		return "You didn't enter a person to geolocate!";
+ 		return "null";
  		
 		
 	}
