@@ -26,7 +26,6 @@ public class SqueakerBot
     	LOGGER.info("Initializing SqueakerBot...");
     	MinecraftForge.EVENT_BUS.register(new ChatListener());
     	LOGGER.info("Initializing Commands...");
-    	MinecraftForge.EVENT_BUS.register(new CommandManager());
     	cm.registerCommands();
     }
 
